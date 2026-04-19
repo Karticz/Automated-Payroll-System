@@ -3,10 +3,10 @@ import pandas as pd # Make sure you have installed this (pip install pandas open
 from datetime import datetime
 
 def run_payroll():
-    # Define paths
+    # Defining paths
     db_path = r'D:\Payroll_Project\company_data.db'
     
-    # 1. Fetch data from SQL
+    # 1. Fetching data from SQL
     conn = sqlite3.connect(db_path)
     df = pd.read_sql_query("SELECT * FROM employees", conn)
     conn.close()
